@@ -4,7 +4,7 @@ Modern, responsive fitness exercise explorer built with HTML, CSS and Vanilla Ja
 
 ### 🌐 Live Demo
 
-[View Live Demo]()
+[View Live Demo](https://johnyisbackk.github.io/js-exercise-explorer/)
 
 ### 📸 Preview
 
