@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Exercise Explorer PRO - Discover exercises, explore muscle groups, find workouts and save your favorite exercises."
+    />
+
+    <!-- ========================================== -->
+    <!-- GOOGLE FONTS -->
+    <!-- ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- ========================================== -->
+    <!-- LUCIDE ICONS -->
+    <!-- ========================================== -->
+
+    <script
+      src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Discover Your Next Exercise</title>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <!-- ========================================== -->
+      <!-- HEADER -->
+      <!-- ========================================== -->
+
+      <header class="header">
+        <a href="#" class="logo">
+          <div class="header-icon">
+            <i data-lucide="dumbbell"></i>
+          </div>
+
+          <h2>Exercise Explorer <span>PRO</span></h2>
+        </a>
+
+        <nav class="nav">
+          <a href="#" class="nav-link active">
+            <i data-lucide="dumbbell"></i>
+            <span>Exercises</span>
+          </a>
+
+          <a href="#" class="nav-link">
+            <i data-lucide="heart"></i>
+            <span>Favorites</span>
+          </a>
+        </nav>
+
+        <button type="button" class="theme-btn" id="themeBtn">
+          <i data-lucide="moon"></i>
+        </button>
+      </header>
+
+      <!-- ========================================== -->
+      <!-- HERO SECTION -->
+      <!-- ========================================== -->
+
+      <section class="hero-section">
+        <div class="hero-content">
+          <span class="hero-badge">Train Smarter</span>
+
+          <h1>
+            Discover Your <br />
+            Next <span>Exercise.</span>
+          </h1>
+
+          <p>
+            Explore 800+ exercises, target specific muscle groups, find the
+            right equipment and build your favorite.
+          </p>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <i data-lucide="layers"></i>
+              <span>800+ Exercises</span>
+            </div>
+
+            <div class="hero-stat">
+              <i data-lucide="target"></i>
+              <span>Muscle Group</span>
+            </div>
+
+            <div class="hero-stat">
+              <i data-lucide="heart"></i>
+              <span>Save Favorites</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-background">
+          <img
+            src="assets/fitness-avatar.png"
+            alt="Fitness athlete"
+            class="hero-athlete"
+          />
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- MAIN CONTENT -->
+      <!-- ========================================== -->
+
+      <main class="main-content">
+        <!-- ========================================== -->
+        <!-- SEARCH & FILTERS -->
+        <!-- ========================================== -->
+
+        <section class="filters-section">
+          <div class="search-box">
+            <i data-lucide="search"></i>
+            <input
+              type="text"
+              class="search-input"
+              id="searchInput"
+              placeholder="Search exercises..."
+            />
+          </div>
+
+          <div class="filter-actions">
+            <button type="button" class="filter-btn active" data-muscle="all">
+              <i data-lucide="layout-grid"></i>
+              <span>All</span>
+            </button>
+
+            <button type="button" class="filter-btn" data-muscle="chest">
+              <i data-lucide="shirt"></i>
+              <span>Chest</span>
+            </button>
+
+            <button type="button" class="filter-btn" data-muscle="back">
+              <i data-lucide="shield"></i>
+              <span>Back</span>
+            </button>
+
+            <button type="button" class="filter-btn" data-muscle="legs">
+              <i data-lucide="footprints"></i>
+              <span>Legs</span>
+            </button>
+
+            <button type="button" class="filter-btn" data-muscle="arms">
+              <i data-lucide="biceps-flexed"></i>
+              <span>Arms</span>
+            </button>
+
+            <button type="button" class="filter-btn" data-muscle="shoulders">
+              <i data-lucide="person-standing"></i>
+              <span>Shoulders</span>
+            </button>
+
+            <button type="button" class="filter-btn" data-muscle="abs">
+              <i data-lucide="scan"></i>
+              <span>Abs</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- EXERCISES SECTION -->
+        <!-- ========================================== -->
+
+        <section class="exercises-section">
+          <div class="exercise-header">
+            <div class="exercise-title">
+              <h2>Exercise Library</h2>
+              <p>Browse, search and filter exercises from our database.</p>
+            </div>
+
+            <div class="exercise-count">
+              <span id="exerciseFoundValue">0</span>
+              <strong>Exercises Found</strong>
+            </div>
+          </div>
+
+          <div class="exercises-grid" id="exercisesGrid">
+            <!-- THIS WILL BE RENDERED IN JS -->
+          </div>
+
+          <div class="show-more-wrapper">
+            <button type="button" class="show-more-btn" id="showMoreBtn">
+              Show More Exercises
+              <i data-lucide="chevron-down"></i>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- ========================================== -->
+      <!-- FOOTER -->
+      <!-- ========================================== -->
+
+      <footer class="footer">
+        <div class="footer-logo">
+          <div class="footer-icon">
+            <i data-lucide="dumbbell"></i>
+          </div>
+
+          <h2>Exercise Explorer <span>PRO</span></h2>
+        </div>
+
+        <div class="footer-content">
+          <span>Discover • Train • Progress</span>
+        </div>
+
+        <div class="footer-copyright">
+          &copy; 2026 Exercise Explorer PRO. All rights reserved.
+        </div>
+      </footer>
+
+      <!-- ========================================== -->
+      <!-- EXERCISE DETAILS MODAL -->
+      <!-- ========================================== -->
+
+      <div class="exercise-modal-overlay" id="exerciseModalOverlay"></div>
+    </div>
+  </body>
+</html>
